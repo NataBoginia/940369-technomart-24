@@ -27,7 +27,7 @@
         </div>
 
         <div class="navigation-body">
-          <h1 class="page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+          <h1 class="main-page-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <address class="header-address">
             <p class="address-phone">+7 (812) 555-05-55</p>
             <p class="address-physical">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -38,18 +38,19 @@
             <li class="register-link"><a href="#">Регистрация</a></li>
           </ul>
 
-          <div class="authorized-user-navigation">
-            <p class="navigation-user-name"> Равшан Джамшутович
-              <button type="button" name="logout" class="logout-button">Выход</button>
+          <div class="authorized-user-navigation hidden">
+            <p class="navigation-user-name">
+              <a href="profile.html" class="user-name">Равшан Джамшутович</a>
+              <a href="logout.html" class="user-logout">Выход</a>
             </p>
             <a href="orders.html">Мои заказы</a>
-            <a href="account.html">Личный кабинет</a>
+            <a href="profile.html">Личный кабинет</a>
           </div>
 
         </div>
 
         <ul class="site-navigation">
-          <li><a>Главная</a></li>
+          <li class="site-navigation-current"><a>Главная</a></li>
           <!--На макетах никак не выделено в навигации, на каком разделе я нахожусь.
          На этой странице же открыта вкладка "Главная"? Надо у нее убрать адрес ссылки?-->
           <li><a href="company.html">Компания</a></li>
@@ -64,18 +65,29 @@
     </header>
 
     <main class="main-content">
-      <!--Пропуск части макета-->
+      <!--Пропуск красной части макета-->
       <section class="content-info">
         <h2>Компания «Техномарт»</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта</p>
-        <p></p>
-        <ul>
-          <li></li>
+        <p>Настоящий мужской шоппинг начинается здесь!
+          Огромный выбор товаров для ремонта и строительства не оставит равнодушными
+          любителей сэкономить на гастарбайтерах.</p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России!
+          Техномарт работает со многими транспортными компаниями:
+        </p>
+        <ul class="trasport-companies-list">
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
         </ul>
-
+        <a href="company.html" class="button">Подробнее о компании</a>
       </section>
+
       <section class="content-contacts">
         <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис:</p>
+        <img src="img/map.jpg" alt="Расположение офиса компании «Техномарт»">
+        <a href="feedback.html" class="button">Заблудились? Напишите нам!</a>
 
       </section>
 
@@ -84,9 +96,7 @@
     <footer class="main-footer">
 
       <div class="footer-main-block">
-        <a class="logo-link">
-          <img src="img/logo.svg" alt="Логотип компании «Техномарт»" width="100" height="20">
-        </a>
+        <img src="img/logo.svg" alt="Логотип компании «Техномарт»" width="100" height="20">
 
         <address class="footer-address">
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -131,5 +141,17 @@
       </div>
 
     </footer>
+
+    <section class="popup feedback-popup">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <!--Здесь будет форма обратной связи-->
+      <button type="button" name="close-feedback-popup" class="close-popup-button">Закрыть</button>
+    </section>
+
+    <section class="popup map-popup">
+      <h2 class="visually-hidden">Карта с расположением офиса «Техномарт»</h2>
+      <img src="img/map-full.jpg" alt="Расположение офиса" width="300" height="200">
+      <button type="button" name="close-map-popup" class="close-popup-button">Закрыть</button>
+    </section>
   </body>
 </html>
