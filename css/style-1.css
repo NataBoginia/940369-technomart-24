@@ -1,0 +1,59 @@
+body{
+  background-color: gray;
+}
+
+
+/* Для слайдера баннеров*/
+.banner-slide,
+.banner-toggle
+{
+  display: none;
+}
+
+.banner-drill:checked~.slide-drill{
+  display: block;
+}
+
+.banner-perforator:checked~.slide-perforator{
+  display: block;
+}
+
+.banner-toggles label{
+  font-size: 0;
+  display: inline-block;
+  width:30px;
+  height: 30px;
+  background-size: 10px 30px;
+  background-repeat: no-repeat;
+}
+
+.banner-toggle-dots label{
+
+  background: url('../img/radio-off.svg') no-repeat;
+
+}
+
+.banner-toggle-arrows label{
+  background: url('../img/icon-left.svg') no-repeat;
+}
+
+/* Для меню "Сервисы" */
+ /* .slide{
+  display: none;
+}
+
+.service-toggle{
+  display: none;
+}
+
+.toggle-delivery:checked~.service-slides .delivery-slide{
+  display: block;
+}
+
+.toggle-warranty:checked~.service-slides .warranty-slide{
+  display: block;
+}
+
+.toggle-credit:checked~.service-slides .credit-slide{
+  display: block;
+} */
