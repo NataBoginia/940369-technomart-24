@@ -73,16 +73,37 @@
       </ul>
 
       <h1 class="page-title">Перфораторы</h1>
-      <!--Пропуск красной части макета с фильтром по цене-->
-      <section class="catalog-filters">
-        <h2 class="visually-hidden">Фильтры товаров</h2>
-        <!--Здесь будет форма для фильтров-->
-      </section>
-
-      <!--Пропуск красной части макета с сортировкой-->
 
       <section class="catalog">
-        <h2 class="visually-hidden">Список перфораторовв</h2>
+        <h2 class="visually-hidden">Список перфораторов</h2>
+
+        <section class="catalog-filters">
+          <h2>Фильтр:</h2>
+          <!--Здесь будет форма для фильтров-->
+        </section>
+
+        <section class="catalog-sort">
+          <h2>Сортировка:</h2>
+
+          <div class="sort-type-list">
+            <input class="sort-type sort-by-price" id="sort-by-price" name="sort-type" type="radio" checked>
+            <input class="sort-type sort-by-type" id="sort-by-type" name="sort-type" type="radio">
+            <input class="sort-type sort-by-func" id="sort-by-func" name="sort-type" type="radio">
+            <label for="sort-by-price">По цене</label>
+            <label for="sort-by-type">По типу</label>
+            <label for="sort-by-func">По функционалу</label>
+          </div>
+
+          <div class="sort-direction-list">
+            <input class="sort-direction sort-asc" id="sort-asc" name="sort-direction" type="radio" checked>
+            <input class="sort-direction sort-desc" id="sort-desc" name="sort-direction" type="radio">
+            <label for="sort-asc">По возрастанию</label>
+            <label for="sort-desc">По убыванию</label>
+          </div>
+
+        </section>
+
+
         <ul class="catalog-items">
 
           <li class="catalog-item">
@@ -218,10 +239,25 @@
           </li>
         </ul>
 
+        <ul class="catalog-pagination">
+          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+          <li class="pagination-item"><a href="#">2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+          <li class="pagination-item"><a href="#">Следующая</a></li>
+        </ul>
+
       </section>
 
-
-      <!--Пропуск красной части макета с навигацией и текстом-->
+      <section class="catalog-info">
+        <h2>Пара слов о перфораторах</h2>
+        <p>
+          Перфоратор — универсальный строительный инструмент.
+          Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы.
+          Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </section>
 
     </main>
 
