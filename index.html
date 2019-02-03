@@ -94,14 +94,15 @@
 
         <div class="banner-slider">
 
-          <button class="banner-button-left" type="button" name="banner-left">Налево</button>
-          <button class="banner-button-right" type="button" name="banner-right">Направо</button>
-
-          <input class="banner-toggle banner-drill" id="banner-drill" name="banner-toggle" type="radio" checked>
-          <input class="banner-toggle banner-perforator" id="banner-perforator" name="banner-toggle" type="radio">
+          <div class="banner-buttons">
+            <button class="banner-button-left" type="button" name="banner-left">Налево</button>
+            <button class="banner-button-right" type="button" name="banner-right">Направо</button>
+          </div>
 
           <div class="banner-toggle-dots">
+            <input class="banner-toggle banner-drill" id="banner-drill" name="banner-toggle" type="radio" checked>
             <label for="banner-drill">Слайд 1</label>
+            <input class="banner-toggle banner-perforator" id="banner-perforator" name="banner-toggle" type="radio">
             <label for="banner-perforator">Слайд 2</label>
           </div>
 
@@ -122,8 +123,12 @@
       </section>
 
       <section class="content-popular-items">
-        <h2>Популярные товары:</h2>
-        <a class="button" href="popular-items.html">Все популярные товары</a>
+
+        <div class="content-popular-header">
+          <h2>Популярные товары:</h2>
+          <a class="button" href="popular-items.html">Все популярные товары</a>
+        </div>
+
         <ul class="popular-items-list">
           <li class="catalog-item">
             <a class="item-thumbnail" href="bosch-bfg9000.html">
@@ -240,6 +245,7 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
+        <!--по разметке сладера будет отдельный скринкаст -->
 
         <input class="service-toggle toggle-delivery" id="toggle-delivery" name="service-toggle" type="radio" checked>
         <input class="service-toggle toggle-warranty" id="toggle-warranty" name="service-toggle" type="radio">
