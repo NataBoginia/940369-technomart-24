@@ -12,8 +12,12 @@
         <a class="logo-link">
           <img src="img/logo.svg" alt="Логотип компании &laquo;Техномарт&raquo;" width="111" height="18">
         </a>
-        <!-- <span class="header-search">Поиск</span> -->
-        <!-- Тут будет форма для поиска-->
+
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search-text">Поиск по сайту магазина Техномарт</label>
+          <input id="search-text" type="search" name="search-text" value="" placeholder="Поиск:">
+          <button class="visually-hidden" type="submit">Искать</button>
+        </form>
 
         <div class="basket-navigation">
           <a class="bookmarks-link" href="bookmarks.html">
@@ -197,43 +201,43 @@
         <a class="button" href="manufacturers.html">Все производители</a>
         <ul class="manufacturers-list">
           <li>
-            <a href="bosch-items.html">
-              <img src="img/logo-bosch.jpg" alt="Bosch" width="126" height="37">
+            <a href="bosch-items.html" aria-label="Перейти на страницу с товарами фирмы Bosch">
+              <img src="img/logo-bosch.jpg" alt="Логотип фирмы Bosch" width="126" height="37">
             </a>
           </li>
           <li>
-            <a href="makita-items.html">
-              <img src="img/logo-makita.jpg" alt="Makita" width="123" height="40">
+            <a href="makita-items.html" aria-label="Перейти на страницу с товарами фирмы Makita">
+              <img src="img/logo-makita.jpg" alt="Логотип фирмы Makita" width="123" height="40">
             </a>
           </li>
           <li>
-            <a href="dewalt-items.html">
-              <img src="img/logo-de-walt.jpg" alt="DeWalt" width="146" height="44">
+            <a href="dewalt-items.html" aria-label="Перейти на страницу с товарами фирмы DeWalt">
+              <img src="img/logo-de-walt.jpg" alt="Логотип фирмы DeWalt" width="146" height="44">
             </a>
           </li>
           <li>
-            <a href="interskol-items.html">
-              <img src="img/logo-interskol.jpg" alt="Интерскол" width="200" height="88">
+            <a href="interskol-items.html" aria-label="Перейти на страницу с товарами фирмы Интерскол">
+              <img src="img/logo-interskol.jpg" alt="Логотип фирмы Интерскол" width="200" height="88">
             </a>
           </li>
           <li>
-            <a href="hitachi-items.html">
-              <img src="img/logo-hitachi.jpg" alt="Hitachi" width="169" height="31">
+            <a href="hitachi-items.html" aria-label="Перейти на страницу с товарами фирмы Hitachi">
+              <img src="img/logo-hitachi.jpg" alt="Логотип фирмы Hitachi" width="169" height="31">
             </a>
           </li>
           <li>
-            <a href="lg-items.html">
-              <img src="img/logo-lg.jpg" alt="LG" width="121" height="73">
+            <a href="lg-items.html" aria-label="Перейти на страницу с товарами фирмы LG">
+              <img src="img/logo-lg.jpg" alt="Логотип фирмы LG" width="121" height="73">
             </a>
           </li>
           <li>
-            <a href="aeg-items.html">
-              <img src="img/logo-aeg.jpg" alt="AEG" width="151" height="96">
+            <a href="aeg-items.html" aria-label="Перейти на страницу с товарами фирмы AEG">
+              <img src="img/logo-aeg.jpg" alt="Логотип фирмы AEG" width="151" height="96">
             </a>
           </li>
           <li>
-            <a href="metabo-items.html">
-              <img src="img/logo-metabo.jpg" alt="Metabo" width="204" height="69">
+            <a href="metabo-items.html" aria-label="Перейти на страницу с товарами фирмы Metabo">
+              <img src="img/logo-metabo.jpg" alt="Логотип фирмы Metabo" width="204" height="69">
             </a>
           </li>
         </ul>
@@ -313,7 +317,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <a class="map-link" href="map.html">
-          <img src="img/map-thumb.jpg" alt="Расположение офиса компании &laquo;Техномарт&raquo;" width="300" height="158">
+          <img src="img/map-thumb.jpg" alt="Офис компании Техномарт по адресу улица Большая Конюшенная, дом 19, Санкт-Петербург" width="300" height="158">
         </a>
         <a class="button" href="feedback.html">Заблудились? Напишите нам!</a>
 
@@ -356,9 +360,9 @@
         </p>
 
         <ul class="footer-socials">
-          <li><a href="https://vk.com">Вконтакте</a></li>
-          <li><a href="https://www.facebook.com">Фейсбук</a></li>
-          <li><a href="https://www.instagram.com">Инстаграм</a></li>
+          <li><a href="https://vk.com">Страница Техномарта во Вконтакте</a></li>
+          <li><a href="https://www.facebook.com">Страница Техномарта в Фейсбуке</a></li>
+          <li><a href="https://www.instagram.com">Страница Техномарта в Инстаграм</a></li>
         </ul>
 
         <p class="footer-feedback">
@@ -377,13 +381,38 @@
 
     <section class="popup feedback-popup">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <!--Здесь будет форма обратной связи-->
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+
+        <div class="feedback-inputs">
+          <p>
+            <label class="feedback-form-label">
+              Ваше имя:
+              <input type="text" name="username" value="" placeholder="Имя Фамилия">
+            </label>
+          </p>
+          <p>
+            <label class="feedback-form-label">
+              Ваш e-mail:
+              <input type="email" name="email" value="" placeholder="email@example.com">
+            </label>
+          </p>
+          <p>
+            <label class="feedback-form-label">
+              Текст письма:
+              <textarea name="text" rows="8" cols="50" placeholder="В свободной форме"></textarea>
+            </label>
+          </p>
+        </div>
+
+        <button type="submit">Отправить</button>
+
+      </form>
       <button class="close-popup-button" type="submit" name="close-feedback-popup">Закрыть</button>
     </section>
 
     <section class="popup map-popup">
       <h2 class="visually-hidden">Карта с расположением офиса &laquo;Техномарт&raquo;</h2>
-      <img src="img/map-full.jpg" alt="Расположение офиса" width="940" height="446">
+      <img src="img/map-full.jpg" alt="Офис компании Техномарт по адресу улица Большая Конюшенная, дом 19, Санкт-Петербург" width="940" height="446">
       <button class="close-popup-button" type="button" name="close-map-popup">Закрыть</button>
     </section>
   </body>
