@@ -88,6 +88,8 @@
             <fieldset>
               <legend>Цена:</legend>
 
+              <!--по разметке ползунка выбора цены будет отдельный скринкаст -->
+
               <div class="price-range-inputs">
                 <label class="visually-hidden" for="price-range-min">Выбор нижней границы диапазона цен</label>
                 <input class="price-range-min" id="price-range-min" name="min" type="range" value="0" step="100" min="0" max="40000">
@@ -97,9 +99,9 @@
 
               <div class="price-range-outputs">
                 <label class="visually-hidden" for="price-result-min">Минимальная цена</label>
-                <output id="price-result-min" name="resultMin">0</output>
+                <input id="price-result-min" name="resultMin" type="number" value="0">
                 <label class="visually-hidden" for="price-result-max">Максимальная цена</label>
-                <output id="price-result-max" name="resultMax">30000</output>
+                <input id="price-result-max" name="resultMax" type="number" value="30000">
               </div>
             </fieldset>
 
@@ -329,7 +331,10 @@
     <footer class="main-footer">
 
       <div class="footer-main-block">
-        <img src="img/logo.svg" alt="Логотип компании &laquo;Техномарт&raquo;" width="138" height="23">
+
+        <a class="footer-logo-link" href="index.html">
+          <img src="img/logo.svg" alt="Логотип компании &laquo;Техномарт&raquo;" width="138" height="23">
+        </a>
 
         <ul class="footer-main-navigation">
           <li><a href="company.html">Компания</a></li>
