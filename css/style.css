@@ -1,3 +1,15 @@
 body{
   background-color: #F4F6F8;
+
 }
+
+/* .visually-hidden {
+  position: absolute; - вырывает из контекста
+  width: 1px; - 1 на 1 пиксель, не 0, так как некоторые скринридеры такие элементы не выводят.
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */

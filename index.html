@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -99,15 +100,13 @@
         <div class="banner-slider">
 
           <div class="banner-buttons">
-            <button class="banner-button-left" type="button" name="banner-left">Налево</button>
-            <button class="banner-button-right" type="button" name="banner-right">Направо</button>
+            <button class="banner-button banner-button-left" type="button">Налево</button>
+            <button class="banner-button banner-button-right" type="button">Направо</button>
           </div>
 
           <div class="banner-toggle-dots">
-            <input class="banner-toggle banner-drill" id="banner-drill" name="banner-toggle" type="radio" checked>
-            <label for="banner-drill">Слайд 1</label>
-            <input class="banner-toggle banner-perforator" id="banner-perforator" name="banner-toggle" type="radio">
-            <label for="banner-perforator">Слайд 2</label>
+            <button class="banner-toggle" type="button">Слайд каталога дрелей</button>
+            <button class="banner-toggle" type="button">Слайд каталога перфораторов</button>
           </div>
 
           <div class="banner-slide slide-drill slide-current">
@@ -267,32 +266,32 @@
           </li>
         </ul>
 
-        <ul class="service-slides">
-          <li class="delivery-slide slide">
-            <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
+        <section class="slide delivery-slide">
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо<br>
+            к вашему подъезду совершенно бесплатно!
+            Ведь мы неплохо заработаем,<br>
+            поднимая его на ваш этаж!
+          </p>
+        </section>
+
+        <section class="slide warranty-slide">
+          <h3>Гарантия</h3>
+          <p>Если купленный у нас товар поломается или заискрит,<br>
+            а также в случае пожара, спровоцированного его возгаранием,
+            вы всегда можете быть уверены в нашей гарантии.
+            Мы обменяем сгоревший товар на новый.<br>
+            Дом уж восстановите как-нибудь сами.
             </p>
-          </li>
-          <li class="warranty-slide slide">
-            <h3>Гарантия</h3>
-            <p>Если купленный у нас товар поломается или заискрит,<br>
-              а также в случае пожара, спровоцированного его возгаранием,
-              вы всегда можете быть уверены в нашей гарантии.
-              Мы обменяем сгоревший товар на новый.<br>
-              Дом уж восстановите как-нибудь сами.
-              </p>
-          </li>
-          <li class="credit-slide slide">
-            <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще!<br>
-               Кредитные консультанты придут вам на помощь.
-            </p>
-            <a class="button" href="credit.html">Отправить заявку</a>
-          </li>
-        </ul>
+        </section>
+
+        <section class="slide credit-slide">
+          <h3>Кредит</h3>
+          <p>Залезть в долговую яму стало проще!<br>
+             Кредитные консультанты придут вам на помощь.
+          </p>
+          <a class="button" href="credit.html">Отправить заявку</a>
+        </section>
 
       </section>
 
@@ -407,13 +406,13 @@
         <button type="submit">Отправить</button>
 
       </form>
-      <button class="close-popup-button" type="submit" name="close-feedback-popup">Закрыть</button>
+      <button class="close-popup-button" type="submit">Закрыть</button>
     </section>
 
     <section class="popup map-popup">
       <h2 class="visually-hidden">Карта с расположением офиса &laquo;Техномарт&raquo;</h2>
       <img src="img/map-full.jpg" alt="Офис компании Техномарт по адресу улица Большая Конюшенная, дом 19, Санкт-Петербург" width="940" height="446">
-      <button class="close-popup-button" type="button" name="close-map-popup">Закрыть</button>
+      <button class="close-popup-button" type="button">Закрыть</button>
     </section>
   </body>
 </html>
