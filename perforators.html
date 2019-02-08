@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог перфораторов в магазине «Техномарт»</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -39,18 +40,15 @@
           <p class="address-physical">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
 
-        <ul class="unauthorized-user-navigation">
-          <li class="login-link"><a href="#">Войти</a></li>
-          <li class="register-link"><a href="#">Регистрация</a></li>
-        </ul>
-
-        <div class="authorized-user-navigation hidden">
-          <p class="navigation-user-name">
+        <div class="authorized-user-navigation">
+          <p class="user-name-block">
             <a class="user-name" href="profile.html">Равшан Джамшутович</a>
             <a class="user-logout" href="logout.html">Выход</a>
           </p>
-          <a href="orders.html">Мои заказы</a>
-          <a href="profile.html">Личный кабинет</a>
+          <div class="cabinet-link-block">
+            <a href="orders.html">Мои заказы</a>
+            <a href="profile.html">Личный кабинет</a>
+          </div>
         </div>
 
       </div>
@@ -74,7 +72,7 @@
         <li class="breadcrumbs-home"><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="tools.html">Инструмент</a></li>
-        <li><a>Перфораторы</a></li>
+        <li><a class="current-page">Перфораторы</a></li>
       </ul>
 
       <h1 class="page-title">Перфораторы</h1>
@@ -91,18 +89,18 @@
 
               <!--по разметке ползунка выбора цены будет отдельный скринкаст -->
 
-              <div class="price-range-inputs">
+              <div class="price-range-slider">
                 <label class="visually-hidden" for="price-range-min">Выбор нижней границы диапазона цен</label>
                 <input class="price-range-min" id="price-range-min" name="min" type="range" value="0" step="100" min="0" max="40000">
                 <label class="visually-hidden" for="price-range-max">Выбор верхней границы диапазона цен</label>
                 <input class="price-range-max" id="price-range-max" name="max" type="range" value="30000" step="100" min="0" max="40000">
               </div>
 
-              <div class="price-range-outputs">
+              <div class="price-range-inputs">
                 <label class="visually-hidden" for="price-result-min">Минимальная цена</label>
-                <input id="price-result-min" name="resultMin" type="number" value="0">
+                <input id="price-result-min" name="resultMin" type="text" value="0">
                 <label class="visually-hidden" for="price-result-max">Максимальная цена</label>
-                <input id="price-result-max" name="resultMax" type="number" value="30000">
+                <input id="price-result-max" name="resultMax" type="text" value="30000">
               </div>
             </fieldset>
 
@@ -110,7 +108,7 @@
               <legend>Производители:</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" id="filter-bosch" name="bosch" type="checkbox" checked>
+                  <input class="visually-hidden filter-input filter-input-checkbox" id="filter-bosch" name="bosch" type="checkbox" checked disabled>
                   <label for="filter-bosch">Bosch</label>
                 </li>
                 <li class="filter-option">
@@ -391,7 +389,7 @@
 
     </footer>
 
-    <section class="item-add-popup">
+    <section class="popup item-add-popup">
       <h2>Товар добавлен в корзину!</h2>
       <a class="add-popup-button" href="order.html">Оформить заказ</a>
       <a class="add-popup-button" href="perforators.html">Продолжить покупки</a>
