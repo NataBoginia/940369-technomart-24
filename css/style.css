@@ -29,9 +29,14 @@ a {
 }
 
 .main-header {
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+
   background-color: #f4f7f9;
 }
 .navigation-header {
+  margin-bottom: 45px;
+
   background-color: #293449;
 }
 
@@ -131,6 +136,11 @@ a {
 }
 
 .unauthorized-user-navigation {
+  width: 300px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -207,12 +217,60 @@ a {
 
   background-color: #172236;
 }
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.navigation-header .container {
+    display: flex;
+}
+
+.logo-link {
+  width: 220px;
+}
+
+.header-search {
+  width: 270px;
+}
+
+.basket-navigation {
+  width: 450px;
+}
+
+.main-header > .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-body {
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.navigation-title {
+  width: 210px;
+  padding: 0 55px;
+}
+
+.header-address {
+  width: 275px;
+}
+
+.authorized-user-navigation {
+  width: 300px;
+  margin-left: auto;
+}
+
+.main-navigation .site-navigation {
+  margin: 0;
+  padding: 0;
+}
 
 .popular-items-list {
   font-weight: bold;
   font-family: 'PT Sans', Arial, sans-serif;
-
-
 }
 
 .content-header {
@@ -280,6 +338,10 @@ a {
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -315,6 +377,8 @@ a {
 }
 
 .catalog-filters {
+  width: 220px;
+
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   text-align: left;
@@ -380,10 +444,19 @@ a {
 }
 
 .catalog-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .catalog-item {
+  width: 218px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
   font-style: normal;
   font-size: 17px;
   line-height: 18px;
@@ -458,7 +531,61 @@ a {
   display: block;
 }
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-info {
+  width: 540px;
+}
+
+.content-contacts {
+  width: 300px;
+}
+
+.inner-page .main-footer {
+  margin-top: 0;
+}
+
+.inner-page .main-header {
+  margin-bottom: 20px;
+}
+
+.inner-page .page-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.items-column {
+  width: 700px;
+}
+
+.catalog-item:nth-child(3n){
+  margin-right: 0;
+}
+
+.catalog-pagination {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-info {
+  background-color: #f4f7f9;
+}
+
 .main-footer {
+  margin-top: 85px;
+
   font-size: 18px;
   line-height: 24px;
   color: #f3f7f9;
@@ -478,6 +605,11 @@ a {
 }
 
 .footer-main-navigation {
+  width: 550px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -497,6 +629,8 @@ a {
 }
 
 .footer-address {
+  width: 380px;
+
   font-style: normal;
   text-align: left;
 }
@@ -517,6 +651,11 @@ a {
 }
 
 .footer-sub-navigation {
+  width: 550px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -544,6 +683,11 @@ a {
 }
 
 .footer-socials {
+  width: 150px;
+  margin: 0;
+  margin-left: 150px;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -560,175 +704,6 @@ a {
   color: #ee3643;
 
   text-decoration: none;
-}
-
-.popup {
-  display: none;
-}
-
-/* Стили для сеток */
-
-/* body > * {
-  background-color: rgba(200, 0, 0, 0.3);
-}
-
-body > * > * {
-  background-color: rgba(0, 255, 0, 0.3);
-}
-
-body > * > * > * {
-  background-color: rgba(0, 255, 255, 0.3);
-}
-
-body > * > * > * > * {
-  background-color: rgba(0, 0, 255, 0.3);
-} */
-
-.container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.navigation-header .container {
-    display: flex;
-}
-
-.navigation-header {
-  margin-bottom: 45px;
-}
-
-.logo-link {
-  width: 220px;
-}
-
-.header-search {
-  width: 270px;
-}
-
-.basket-navigation {
-  width: 450px;
-}
-
-.main-header > .container {
-  display: flex;
-  flex-direction: column;
-}
-
-.navigation-body {
-  display: flex;
-  margin-bottom: 45px;
-}
-
-.navigation-title {
-  width: 210px;
-  padding: 0 55px;
-}
-
-.header-address {
-  width: 275px;
-}
-
-.unauthorized-user-navigation {
-  width: 300px;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
-}
-
-.authorized-user-navigation {
-  width: 300px;
-  margin-left: auto;
-}
-
-.main-navigation .site-navigation {
-  margin: 0;
-  padding: 0;
-}
-
-.index-columns {
-  display: flex;
-  justify-content: space-between;
-}
-
-.content-info {
-  width: 540px;
-}
-
-.content-contacts {
-  width: 300px;
-}
-
-.main-footer {
-  margin-top: 85px;
-}
-
-.inner-page .main-footer {
-  margin-top: 0;
-}
-
-.main-header {
-  margin-bottom: 60px;
-  padding-bottom: 60px;
-}
-
-.inner-page .main-header {
-  margin-bottom: 20px;
-}
-
-.breadcrumbs {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.inner-page .page-title {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.catalog-columns {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
-}
-
-.catalog-filters {
-  width: 220px;
-}
-
-.items-column {
-  width: 700px;
-}
-
-.catalog-items {
-  display: flex;
-  /* justify-content: space-between; */
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.catalog-item {
-  width: 218px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.catalog-item:nth-child(3n){
-  margin-right: 0;
-}
-
-.catalog-pagination {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.catalog-info {
-  background-color: #f4f7f9;
 }
 
 .footer-main-block {
@@ -749,33 +724,8 @@ body > * > * > * > * {
   margin-top: 50px;
 }
 
-.footer-main-navigation {
-  width: 550px;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
-}
-
-.footer-address {
-  width: 380px;
-}
-
-.footer-sub-navigation {
-  width: 550px;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
-}
-
 .footer-copyright {
   width: 240px;
-}
-
-.footer-socials {
-  width: 150px;
-  margin: 0;
-  margin-left: 150px;
-  padding: 0;
 }
 
 .footer-feedback {
@@ -786,3 +736,25 @@ body > * > * > * > * {
 .footer-authors {
   width: 140px;
 }
+
+.popup {
+  display: none;
+}
+
+/* подсветка блоков сетки */
+
+/* body > * {
+  background-color: rgba(200, 0, 0, 0.3);
+}
+
+body > * > * {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+body > * > * > * {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+body > * > * > * > * {
+  background-color: rgba(0, 0, 255, 0.3);
+} */
