@@ -85,8 +85,6 @@ img {
 
 .header-search {
   position: relative;
-
-  font-size: 0;
 }
 
 .header-search input {
@@ -389,8 +387,6 @@ img {
 
 .user-name-block .user-logout {
   width: 40px;
-
-  font-size: 0;
 
   background-image: url("../img/icon-logout-gray.svg");
   background-repeat: no-repeat;
@@ -755,12 +751,16 @@ img {
 .breadcrumbs-home a {
   display: block;
 
-  font-size: 0;
+  width: 20px;
+  height: 20px;
+  padding-left: 0;
+
+  /* font-size: 0; */
 
   background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
   background-position: -2px 3px;
-  background-size: 14px 12px;
+  /* background-size: 14px 12px; */
 }
 
 .breadcrumbs-home a:hover,
@@ -776,7 +776,7 @@ img {
   content: "";
 
   position: absolute;
-  top: 4px;
+  top: 6px;
   right: 1px;
 
   width: 7px;
@@ -1418,8 +1418,6 @@ img {
   margin-left: 150px;
   padding: 0;
   padding-top: 15px;
-
-  font-size: 0;
 
   list-style: none;
 }
