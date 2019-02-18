@@ -124,11 +124,24 @@ img {
   opacity: 1;
 }
 
-.header-search input::-webkit-input-placeholder,
-.header-search input::-moz-placeholder,
-.header-search input:-moz-placeholder,
+.header-search input::-webkit-input-placeholder {
+  color:#ffffff;
+  opacity: 1;
+}
+
+.header-search input::-moz-placeholder {
+  color:#ffffff;
+  opacity: 1;
+  }
+
+.header-search input:-moz-placeholder {
+  color:#ffffff;
+  opacity: 1;
+  }
+
 .header-search input:-ms-input-placeholder {
   color:#ffffff;
+  opacity: 1;
 }
 
 .header-search label::before {
@@ -746,8 +759,8 @@ img {
 
   background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
-  background-position: -2px 0px;
-  background-size: 15px 15px;
+  background-position: -2px 3px;
+  background-size: 14px 12px;
 }
 
 .breadcrumbs-home a:hover,
@@ -878,15 +891,20 @@ img {
   left: 0;
 }
 
+.filter-input:focus+label{
+  outline: 2px dotted #b5b5b5;
+  outline-offset: 5px;
+}
+
 .filter-input+label:hover::before,
-.filter-input+label:focus::before,
+.filter-input:focus+label::before,
 .filter-input-radio:checked+label:hover::after,
-.filter-input-radio:checked+label:focus::after {
-  border-color: #c5c5c5;
+.filter-input-radio:checked:focus+label::after {
+  border-color: #b5b5b5;
 }
 
 .filter-input-checkbox:checked+label:hover::after,
-.filter-input-checkbox:checked+label:focus::after {
+.filter-input-checkbox:checked:focus+label::after {
   background-image: url("../img/checkbox-on-gray.svg");
 }
 
@@ -924,21 +942,21 @@ img {
   top: -2px;
   left: -1px;
 
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
 
-  border: 4px solid #b5b5b5;
+  border: 4px solid #c5c5c5;
   border-radius: 50%;
 }
 
 .filter-input-radio:checked+label::after {
-  top: 6px;
+  top: 7px;
   left: 8px;
 
   width: 0;
   height: 0;
 
-  border: 4px solid #b5b5b5;
+  border: 4px solid #c5c5c5;
   border-radius: 50%;
 }
 
@@ -973,6 +991,7 @@ img {
 
   background-color: transparent;
   border: 1px solid #e5e5e5;
+  border-radius: 2px;
 }
 
 .catalog-sort {
@@ -1012,8 +1031,8 @@ img {
   content: "";
 
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
 
   width: 59px;
   height: 59px;
@@ -1099,7 +1118,7 @@ img {
   display: none;
 
   width: 218px;
-  padding-top: 44px;
+  padding-top: 43px;
   padding-bottom: 31px;
 
   font-style: normal;
@@ -1107,7 +1126,6 @@ img {
   line-height: 18px;
   font-family: "Cuprum", Arial, sans-serif;
   text-transform: uppercase;
-  text-align: center;
   color: #000000;
 
   background-color: #ffffff;
@@ -1120,37 +1138,57 @@ img {
 .item-buttons a {
   display: block;
 
+  box-sizing: border-box;
   width: 135px;
   margin: 0 auto;
-  padding-top: 11px;
+  padding-top: 7px;
   padding-bottom: 7px;
 
+  border: 3px solid #63a63e;
   border-radius: 3px;
 }
 
 .item-buttons .buy-link {
-  margin-bottom: 10px;
+  position: relative;
 
+  margin-bottom: 8px;
+  padding-left: 46px;
+
+  text-align: left;
   color: #ffffff;
 
   background-color: #63a63e;
-  box-shadow: inset 0px -3px 0 0 #367315;
+  border-bottom-color: #367315;
 }
 
 .item-buttons .buy-link:hover,
 .item-buttons .buy-link:focus {
   background-color: #5fbb2d;
+  border-color: #5fbb2d;
+  border-bottom-color: #367315;
 }
 
 .item-buttons .buy-link:active {
   background-color: #518534;
+  border-color: #518534;
+}
+
+.item-buttons .buy-link::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 11px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-basket.svg");
 }
 
 .item-buttons .bookmark-link {
+  text-align: center;
   color: #32425c;
-
-  outline: 3px solid #63a63e;
-  outline-offset: -3px;
 }
 
 .item-buttons .bookmark-link:hover,
@@ -1159,9 +1197,7 @@ img {
 }
 
 .item-buttons .bookmark-link:active {
-  color: rgba(50, 66, 92, 0.3);
-
-  border-color: #e7e9ec;
+  opacity: 0.3;
 }
 
 .catalog-item:hover {
@@ -1223,7 +1259,7 @@ img {
   width: 700px;
 }
 
-.catalog-item:nth-child(3n){
+.catalog-item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -1469,7 +1505,7 @@ img {
 }
 
 /* подсветка блоков сетки */
-
+/*
 body > * {
   background-color: rgba(200, 0, 0, 0.3);
 }
@@ -1484,4 +1520,4 @@ body > * > * > * {
 
 body > * > * > * > * {
   background-color: rgba(0, 0, 255, 0.3);
-}
+} */
