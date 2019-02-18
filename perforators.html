@@ -11,22 +11,22 @@
     <header class="main-header">
 
       <div class="navigation-header">
+
         <div class="container">
           <a class="logo-link" href="index.html">
             <img src="img/logo.svg" alt="Логотип компании &laquo;Техномарт&raquo;" width="111" height="18">
           </a>
 
           <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-            <label class="visually-hidden" for="search-text">Поиск по сайту магазина Техномарт</label>
             <input id="search-text" type="search" name="search-text" value="" placeholder="Поиск:">
-            <button class="visually-hidden" type="submit">Искать</button>
+            <label for="search-text">Поиск по сайту магазина Техномарт</label>
           </form>
 
           <div class="basket-navigation">
-            <a class="bookmarks-link" href="bookmarks.html">
+            <a class="nav-icon-link bookmarks-link" href="bookmarks.html">
               <span>Закладки: </span><span class="bookmarks-count">0</span>
             </a>
-            <a class="basket-link" href="basket.html">
+            <a class="nav-icon-link basket-link" href="basket.html">
               <span>Корзина: </span><span class="basket-count">0</span>
             </a>
             <a class="order-link" href="order.html">Оформить заказ</a>
@@ -49,20 +49,21 @@
               <a class="user-logout" href="logout.html">Выход</a>
             </p>
             <div class="cabinet-link-block">
-              <a href="orders.html">Мои заказы</a>
+              <a class="user-order-link" href="orders.html">Мои заказы</a>
               <a href="profile.html">Личный кабинет</a>
             </div>
           </div>
         </div>
+
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="company.html">Компания</a></li>
-            <li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="promo.html">Спецпредложения</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li class="site-navigation-item"><a href="index.html">Главная</a></li>
+            <li class="site-navigation-item"><a href="company.html">Компания</a></li>
+            <li class="site-navigation-item active"><a href="catalog.html">Каталог</a></li>
+            <li class="site-navigation-item"><a href="news.html">Новости</a></li>
+            <li class="site-navigation-item"><a href="promo.html">Спецпредложения</a></li>
+            <li class="site-navigation-item"><a href="delivery.html">Доставка</a></li>
+            <li class="site-navigation-item"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
 
@@ -88,7 +89,7 @@
               <h2>Фильтр:</h2>
               <form class="catalog-filter-form" action="https://echo.htmlacademy.ru" method="get"
               oninput="resultMin.value=min.value;resultMax.value=max.value">
-                <fieldset>
+                <fieldset class="fieldset-price">
                   <legend>Цена:</legend>
 
                   <!--по разметке ползунка выбора цены будет отдельный скринкаст -->
@@ -108,7 +109,7 @@
                   </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="fieldset-firms">
                   <legend>Производители:</legend>
                   <ul>
                     <li class="filter-option">
@@ -134,7 +135,7 @@
                   </ul>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="fieldset-power">
                   <legend>Питание:</legend>
                   <ul>
                     <li class="filter-option">
@@ -347,12 +348,12 @@
             <img src="img/logo.svg" alt="Логотип компании &laquo;Техномарт&raquo;" width="138" height="23">
           </a>
 
-          <ul class="footer-main-navigation">
-            <li><a href="company.html">Компания</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+          <ul class="footer-navigation footer-main-navigation">
+            <li class="footer-nav-item"><a href="company.html">Компания</a></li>
+            <li class="footer-nav-item"><a href="news.html">Новости</a></li>
+            <li class="footer-nav-item"><a href="catalog.html">Каталог</a></li>
+            <li class="footer-nav-item"><a href="delivery.html">Доставка</a></li>
+            <li class="footer-nav-item"><a href="contacts.html">Контакты</a></li>
           </ul>
         </div>
 
@@ -362,11 +363,11 @@
             <a class="address-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </address>
 
-          <ul class="footer-sub-navigation">
-            <li><a href="materials.html">Материалы</a></li>
-            <li><a href="equipment.html">Техника</a></li>
-            <li><a href="tools.html">Инструмент</a></li>
-            <li><a href="promo.html">Спецпредложения</a></li>
+          <ul class="footer-navigation footer-sub-navigation">
+            <li class="footer-nav-item"><a href="materials.html">Материалы</a></li>
+            <li class="footer-nav-item"><a href="equipment.html">Техника</a></li>
+            <li class="footer-nav-item"><a href="tools.html">Инструмент</a></li>
+            <li class="footer-nav-item"><a href="promo.html">Спецпредложения</a></li>
           </ul>
         </div>
       </div>
@@ -379,14 +380,14 @@
           </p>
 
           <ul class="footer-socials">
-            <li><a href="https://vk.com">Страница Техномарта во Вконтакте</a></li>
-            <li><a href="https://www.facebook.com">Страница Техномарта в Фейсбуке</a></li>
-            <li><a href="https://www.instagram.com">Страница Техномарта в Инстаграм</a></li>
+            <li><a class="vk-link" href="https://vk.com">Страница Техномарта во Вконтакте</a></li>
+            <li><a class="fb-link" href="https://www.facebook.com">Страница Техномарта в Фейсбуке</a></li>
+            <li><a class="insta-link" href="https://www.instagram.com">Страница Техномарта в Инстаграм</a></li>
           </ul>
 
           <p class="footer-feedback">
             Обратная связь:
-            <a class="email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
 
           <p class="footer-authors">
@@ -395,6 +396,7 @@
           </p>
         </div>
       </div>
+
     </footer>
 
     <section class="popup item-add-popup">
