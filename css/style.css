@@ -46,7 +46,7 @@ img {
 }
 
 .navigation-header {
-  margin-bottom: 46px;
+  margin-bottom: 47px;
 
   background-color: #293449;
 }
@@ -161,7 +161,7 @@ img {
 .basket-navigation a {
   box-sizing: border-box;
   width: 150px;
-  padding-top: 9px;
+  padding-top: 10px;
   /* padding-left: 8px; */
 
   color: #ffffff;
@@ -195,7 +195,9 @@ img {
   width: 200px;
   margin: 0;
   margin-right: 20px;
-  padding: 0 50px;
+  padding: 0;
+  padding-left: 52px;
+  padding-right: 48px;
 
   font-style: italic;
   font-size: 16px;
@@ -214,25 +216,25 @@ img {
 
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 5px;
-  padding-top: 10px;
-  padding-bottom: 9px;
-  padding-left: 25px;
+  margin-bottom: 3px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 22px;
 
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   color: #ee3643;
 
-  border: 2px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .header-address .address-phone::before {
   content: "";
 
   position: absolute;
-  top: 9px;
-  left: 12px;
+  top: 7px;
+  left: 11px;
 
   width: 22px;
   height: 22px;
@@ -244,7 +246,7 @@ img {
 
 .header-address .address-phone:hover,
 .header-address .address-phone:focus {
-  border: 2px solid #ee3643;
+  border: 3px solid #ee3643;
 }
 
 .header-address .address-phone:active {
@@ -300,15 +302,15 @@ img {
   position: relative;
 
   width: 120px;
-  padding-left: 47px;
+  padding-left: 46px;
 }
 
 .login-link a::before {
   content: "";
 
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 9px;
+  left: 11px;
 
   width: 25px;
   height: 25px;
@@ -336,7 +338,7 @@ img {
   display: flex;
 
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   padding: 0;
 
   font-size: 21px;
@@ -350,8 +352,8 @@ img {
 
   box-sizing: border-box;
   width: 260px;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 12px;
   padding-left: 47px;
 
   color: #000000;
@@ -362,7 +364,7 @@ img {
 
   position: absolute;
   top: 9px;
-  left: 11px;
+  left: 13px;
 
   width: 23px;
   height: 23px;
@@ -391,7 +393,7 @@ img {
   background-image: url("../img/icon-logout-gray.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 22px 22px;
+  background-size: 21px 18px;
 }
 
 .user-name-block .user-logout:hover,
@@ -466,7 +468,7 @@ img {
 
   box-sizing: border-box;
   width: 100%;
-  padding-top: 19px;
+  padding-top: 20px;
   padding-right: 5px;
   padding-bottom: 23px;
   padding-left: 5px;
@@ -526,7 +528,7 @@ img {
   content: "";
 
   position: absolute;
-  top: 7px;
+  top: 8px;
   left: 15px;
 
   width: 20px;
@@ -579,7 +581,7 @@ img {
 .navigation-body {
   display: flex;
 
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .navigation-title {
@@ -687,8 +689,8 @@ img {
   display: block;
 
   width: 220px;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 9px;
 
   font-size: 14px;
   line-height: 18px;
@@ -754,6 +756,7 @@ img {
   width: 20px;
   height: 20px;
   padding-left: 0;
+  padding-right: 16px;
 
   /* font-size: 0; */
 
@@ -776,7 +779,7 @@ img {
   content: "";
 
   position: absolute;
-  top: 6px;
+  top: 5px;
   right: 1px;
 
   width: 7px;
@@ -792,10 +795,10 @@ img {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-right: 20px;
   padding-bottom: 28px;
-  padding-left: 26px;
+  padding-left: 28px;
 
   font-weight: normal;
   font-size: 30px;
@@ -1366,6 +1369,7 @@ img {
 
 .footer-address {
   width: 380px;
+  padding-left: 4px;
 
   font-style: normal;
   text-align: left;
@@ -1417,7 +1421,6 @@ img {
   margin: 0;
   margin-left: 150px;
   padding: 0;
-  padding-top: 15px;
 
   list-style: none;
 }
@@ -1480,22 +1483,28 @@ img {
 
 .footer-info-block .container {
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 37px;
+  padding-bottom: 27px;
 }
 
 .footer-copyright {
   width: 240px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-feedback {
   width: 160px;
+  margin: 0;
   margin-left: auto;
   margin-right: 30px;
+  padding: 0;
 }
 
 .footer-authors {
   width: 110px;
+  margin: 0;
+  padding: 0;
 }
 
 .popup {
