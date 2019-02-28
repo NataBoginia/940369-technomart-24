@@ -1505,6 +1505,9 @@ img {
 
 .show-popup {
   display: block;
+
+  animation-name: open-popup;
+  animation-duration: 0.5s;
 }
 
 .popup .close-popup-button {
@@ -1658,6 +1661,24 @@ img {
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
+.map-popup iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.map-popup img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.map-popup .close-popup-button {
+  z-index: 3;
+}
+
 .item-add-popup {
   padding-top: 65px;
 
@@ -1710,6 +1731,22 @@ img {
 
 .item-add-popup .button-continue:active {
   background-color: rgba(238, 54, 67, 0.7);
+}
+
+/* Анимация */
+
+@keyframes open-popup {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* подсветка блоков сетки */

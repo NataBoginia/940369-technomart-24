@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -321,7 +321,7 @@
           <a class="map-link" href="map.html">
             <img src="img/map-thumb.jpg" alt="Офис компании Техномарт по адресу улица Большая Конюшенная, дом 19, Санкт-Петербург" width="300" height="158">
           </a>
-          <a class="button" href="feedback.html">Заблудились? Напишите нам!</a>
+          <a class="button feedback-button" href="feedback.html">Заблудились? Напишите нам!</a>
 
         </section>
       </div>
@@ -404,7 +404,7 @@
 
     </footer>
 
-    <section class="popup border-popup feedback-popup show-popup">
+    <section class="popup border-popup feedback-popup">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -434,13 +434,14 @@
         </div>
 
       </form>
-      <button class="close-popup-button" type="submit">
+      <button class="close-popup-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
 
-    <section class="popup map-popup show-popup">
+    <section class="popup map-popup">
       <h2 class="visually-hidden">Карта с расположением офиса &laquo;Техномарт&raquo;</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCUbACkX" width="940" height="446" frameborder="1" allowfullscreen="true"></iframe>
       <img src="img/map-full.jpg" alt="Офис компании Техномарт по адресу улица Большая Конюшенная, дом 19, Санкт-Петербург" width="940" height="446">
       <button class="close-popup-button" type="button">
         <span class="visually-hidden">Закрыть</span>
