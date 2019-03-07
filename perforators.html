@@ -121,7 +121,7 @@
                     <label class="visually-hidden" for="price-result-max">Максимальная цена</label>
                     <input id="price-result-max" name="resultMax" type="text" value="30000">
                   </div> -->
-                  <div class="range-controls">
+                  <div class="price-range-controls">
                     <div class="scale">
                       <div class="current-scale">
                       </div>
@@ -132,6 +132,14 @@
                     </div>
 
                   </div>
+
+                  <div class="price-range-inputs">
+                    <label class="visually-hidden" for="price-result-min">Минимальная цена</label>
+                    <input id="price-result-min" name="resultMin" type="text" value="0" autocomplete="off">
+                    <label class="visually-hidden" for="price-result-max">Максимальная цена</label>
+                    <input id="price-result-max" name="resultMax" type="text" value="30000" autocomplete="off">
+                  </div>
+
                 </fieldset>
 
                 <fieldset class="fieldset-firms">
@@ -184,7 +192,7 @@
 
                 <ul class="sort-type-list">
                   <li class="sort-type-current">
-                    <a href="#">По цене</a>
+                    <a class="active-sort-link" href="#">По цене</a>
                   </li>
                   <li>
                     <a href="#">По типу</a>
