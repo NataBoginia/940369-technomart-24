@@ -5,7 +5,7 @@
     <title>Каталог перфораторов в магазине «Техномарт»</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="inner-page">
     <header class="main-header">
@@ -108,7 +108,7 @@
 
                   <!--по разметке ползунка выбора цены будет отдельный скринкаст -->
 
-                  <div class="price-range-slider">
+                  <!-- <div class="price-range-slider">
                     <label class="visually-hidden" for="price-range-min">Выбор нижней границы диапазона цен</label>
                     <input class="price-range-min" id="price-range-min" name="min" type="range" value="0" step="100" min="0" max="40000">
                     <label class="visually-hidden" for="price-range-max">Выбор верхней границы диапазона цен</label>
@@ -120,7 +120,26 @@
                     <input id="price-result-min" name="resultMin" type="text" value="0">
                     <label class="visually-hidden" for="price-result-max">Максимальная цена</label>
                     <input id="price-result-max" name="resultMax" type="text" value="30000">
+                  </div> -->
+                  <div class="price-range-controls">
+                    <div class="scale">
+                      <div class="current-scale">
+                      </div>
+                    </div>
+                    <div class="range-toggles">
+                      <div class="range-toggle range-toggle-min"></div>
+                      <div class="range-toggle range-toggle-max"></div>
+                    </div>
+
                   </div>
+
+                  <div class="price-range-inputs">
+                    <label class="visually-hidden" for="price-result-min">Минимальная цена</label>
+                    <input id="price-result-min" name="resultMin" type="text" value="0" autocomplete="off">
+                    <label class="visually-hidden" for="price-result-max">Максимальная цена</label>
+                    <input id="price-result-max" name="resultMax" type="text" value="30000" autocomplete="off">
+                  </div>
+
                 </fieldset>
 
                 <fieldset class="fieldset-firms">
@@ -173,7 +192,7 @@
 
                 <ul class="sort-type-list">
                   <li class="sort-type-current">
-                    <a href="#">По цене</a>
+                    <a class="active-sort-link" href="#">По цене</a>
                   </li>
                   <li>
                     <a href="#">По типу</a>
@@ -312,10 +331,10 @@
               </ul>
 
               <ul class="catalog-pagination">
-                <li class="pagination-item pagination-item-current"><a href="#" aria-label="Открыть страницу с результатами поиска номер 1">1</a></li>
-                <li class="pagination-item"><a href="#" aria-label="Открыть страницу с результатами поиска номер 2">2</a></li>
-                <li class="pagination-item"><a href="#" aria-label="Открыть страницу с результатами поиска номер 3">3</a></li>
-                <li class="pagination-item"><a href="#" aria-label="Открыть следующую страницу с результатами поиска">Следующая</a></li>
+                <li class="pagination-item-current"><a href="#" aria-label="Открыть страницу с результатами поиска номер 1">1</a></li>
+                <li><a href="#" aria-label="Открыть страницу с результатами поиска номер 2">2</a></li>
+                <li><a href="#" aria-label="Открыть страницу с результатами поиска номер 3">3</a></li>
+                <li><a href="#" aria-label="Открыть следующую страницу с результатами поиска">Следующая</a></li>
               </ul>
 
             </div>
@@ -413,10 +432,10 @@
 
     </footer>
 
-    <section class="popup border-popup item-add-popup show-popup">
+    <section class="popup border-popup item-add-popup">
       <h2>Товар добавлен в корзину!</h2>
       <div class="popup-footer">
-        <a class="button" href="order.html">Оформить заказ</a>
+        <a class="button button-order" href="order.html">Оформить заказ</a>
         <a class="button button-continue" href="perforators.html">Продолжить покупки</a>
       </div>
       <button class="close-popup-button" type="button">
@@ -424,5 +443,6 @@
       </button>
     </section>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
