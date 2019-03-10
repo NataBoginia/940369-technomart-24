@@ -618,8 +618,8 @@ img {
 .content-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 21px;
-  padding: 25px 23px;
+  margin-bottom: 20px;
+  padding: 25px 24px;
 
   color: #32425c;
 
@@ -1144,6 +1144,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 41px;
   padding: 0;
 
   list-style: none;
@@ -1365,7 +1366,7 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 54px;
+  margin-bottom: 52px;
 }
 
 .content-banners .banner {
@@ -1453,8 +1454,8 @@ img {
 .content-header h2 {
   margin: 0;
   padding: 0;
-  padding-left: 5px;
-  padding-top: 2px;
+  padding-left: 4px;
+  padding-top: 4px;
 
   font-weight: normal;
   font-size: 30px;
@@ -1564,6 +1565,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 
   list-style: none;
@@ -1597,6 +1599,8 @@ img {
 }
 
 .catalog-info {
+  padding-top: 64px;
+
   color: #000000;
 
   background-color: #f4f7f9;
@@ -1604,6 +1608,7 @@ img {
 
 .catalog-info h2 {
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
 
   font-weight: normal;
@@ -1615,6 +1620,7 @@ img {
 .catalog-info p {
   margin: 0;
   padding: 0;
+  padding-bottom: 69px;
 
   font-size: 13px;
   line-height: 24px;
