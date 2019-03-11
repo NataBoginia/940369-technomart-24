@@ -39,7 +39,7 @@ img {
 }
 
 .main-header {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   padding-bottom: 60px;
 
   background-color: #f4f7f9;
@@ -93,7 +93,7 @@ img {
   height: 100%;
   padding-top: 11px;
   padding-right: 5px;
-  padding-bottom: 11px;
+  padding-bottom: 13px;
   padding-left: 49px;
 
   font-size: 17px;
@@ -163,9 +163,9 @@ img {
 .basket-navigation a {
   box-sizing: border-box;
   width: 150px;
-  padding-top: 13px;
+  padding-top: 11px;
   padding-right: 5px;
-  padding-bottom: 11px;
+  padding-bottom: 13px;
   /* padding-left: 8px; */
 
   color: #ffffff;
@@ -221,7 +221,7 @@ img {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   padding-top: 8px;
   padding-bottom: 10px;
   padding-left: 22px;
@@ -1168,7 +1168,7 @@ img {
   border: 1px solid #e5e5e5;
 }
 
-.catalog-item.new-item::after {
+.new-item::after {
   content: "";
 
   position: absolute;
@@ -1346,15 +1346,10 @@ img {
   justify-content: space-between;
 }
 
-.banner {
-  font-family: "Cuprum", Arial, sans-serif;
-  color: #ffffff;
-
-  background-color: #ffbf47;
-}
-
 .banner h3 {
   margin: 0;
+  margin-top: 20px;
+  margin-bottom: 13px;
   padding: 0;
 
   font-weight: bold;
@@ -1366,32 +1361,183 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 52px;
+  margin-bottom: 33px;
 }
 
 .content-banners .banner {
-  width: 300px;
-  margin-bottom: 20px;
+  position: relative;
 
+  box-sizing: border-box;
+  width: 300px;
+  min-height: 123px;
+  margin-bottom: 20px;
+  padding-right: 140px;
+  padding-left: 24px;
+
+  font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
 
   background-color: #ffbf47;
+  background-repeat: no-repeat;
 }
 
 .content-banners .banner:nth-of-type(1) {
   background-color: #ffbf47;
+  background-image: url("../img/icon-materials.svg");
+  background-size: 44px 65px;
+  background-position: 213px 31px;
 }
 
 .content-banners .banner:nth-of-type(2) {
   background-color: #3bbce3;
+  background-image: url("../img/icon-tools.svg");
+  background-size: 75px 61px;
+  background-position: 197px 33px;
 }
 
 .content-banners .banner:nth-of-type(3) {
   background-color: #dc91d8;
+  background-image: url("../img/icon-equipment.svg");
+  background-size: 78px 62px;
+  background-position: 191px 31px;
+}
+
+.new-banner::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 59px;
+  height: 59px;
+
+  background-image: url("../img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 .banner-slider {
+  position: relative;
+
   width: 620px;
+  min-height: 266px;
+}
+
+.banner-button {
+  position: absolute;
+  top: 109px;
+
+  width: 36px;
+  height: 50px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.banner-button-left {
+  left: 20px;
+}
+
+.banner-button-right {
+  right: 17px;
+}
+
+.banner-button::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+.banner-button-left::before {
+  transform: translate(-8px, -14px) rotate(45deg);
+}
+
+.banner-button-right::before {
+  transform: translate(-20px, -14px) rotate(-135deg);
+}
+
+.banner-button:hover::before,
+.banner-button:focus::before {
+  border-color: #999999;
+}
+
+.banner-button:active::before {
+  border-color: #666666;
+}
+
+.banner-toggle-dots {
+  position: absolute;
+  bottom: 51px;
+  right: 50%;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  transform: translateX(20px);
+}
+
+.banner-toggle-dots label {
+  position: relative;
+
+  display: block;
+  padding: 8px 8px;
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.banner-toggle-dots label::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  transform: translate(-5px, -5px);
+}
+
+.banner-toggle-dot:checked+label::before {
+  background-color: #ee3643;
+}
+
+.banner-toggle-dot:checked+label:hover::before {
+  border-color: #dddddd;
+}
+
+.banner-toggle-dot:not(:checked)+label:hover::before {
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+
+.banner-toggle-dot:focus+label{
+  outline: 1px dotted #b5b5b5;
+  outline-offset: 3px;
 }
 
 .banner-block {
@@ -1403,13 +1549,24 @@ img {
 
 .banner-block .banner:nth-of-type(1) {
   background-color: #8ed78f;
+  background-image: url("../img/icon-discounts.svg");
+  background-size: 59px 72px;
+  background-position: 196px 26px;
 }
 
 .banner-block .banner:nth-of-type(2) {
   background-color: #ffc047;
+  background-image: url("../img/icon-delivery.svg");
+  background-size: 78px 63px;
+  background-position: 191px 32px;
 }
 
 .banner-link {
+  display: block;
+  box-sizing: border-box;
+  width: 135px;
+  padding: 10px 10px;
+
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -1430,14 +1587,34 @@ img {
 }
 
 .banner-slide {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 620px;
+  height: 266px;
+  padding-top: 22px;
+  padding-left: 24px;
+
   font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
 
   background-color: #675b51;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 620px 266px;
+}
+
+.slide-drill {
+  background-image: url("../img/promo-drills.jpg");
+}
+
+.slide-perforator {
+  background-image: url("../img/promo-perforators.jpg");
 }
 
 .banner-slide h3 {
   margin: 0;
+  margin-bottom: 2px;
   padding: 0;
 
   font-weight: bold;
@@ -1447,8 +1624,16 @@ img {
 }
 
 .banner-slide p {
+  margin: 0;
+  margin-bottom: auto;
+
   font-size: 18px;
   line-height: 24px;
+}
+
+.slide-link {
+  width: 195px;
+  margin-bottom: 22px;
 }
 
 .content-header h2 {
@@ -1490,6 +1675,8 @@ img {
 }
 
 .manufacturers-list a {
+  position: relative;
+
   display: block;
   width: 218px;
   height: 143px;
@@ -1507,6 +1694,15 @@ img {
 .manufacturers-list a:active {
   box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.3;
+}
+
+.manufacturers-list img {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .content-info {
