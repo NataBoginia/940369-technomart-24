@@ -91,9 +91,9 @@ img {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding-top: 11px;
+  padding-top: 12px;
   padding-right: 5px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   padding-left: 49px;
 
   font-size: 17px;
@@ -163,9 +163,9 @@ img {
 .basket-navigation a {
   box-sizing: border-box;
   width: 150px;
-  padding-top: 11px;
+  padding-top: 12px;
   padding-right: 5px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   /* padding-left: 8px; */
 
   color: #ffffff;
@@ -581,7 +581,7 @@ img {
 
 .navigation-body {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .navigation-title {
@@ -600,7 +600,7 @@ img {
 
 .popular-items-list {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
   padding: 0;
 
   display: flex;
@@ -619,7 +619,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding: 25px 24px;
+  padding: 25px 23px 27px 24px;
 
   color: #32425c;
 
@@ -1187,7 +1187,7 @@ img {
 .catalog-item .item-thumbnail {
   width: 218px;
   height: 170px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .catalog-item h3 {
@@ -1212,7 +1212,7 @@ img {
 
 .catalog-item .promo-price {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   text-decoration: line-through;
   color: #999999;
@@ -1222,10 +1222,10 @@ img {
   position: relative;
 
   display: block;
-  width: 141px;
+  width: 138px;
   margin-bottom: 10px;
-  margin-left: 43px;
-  padding-top: 10px;
+  margin-left: 42px;
+  padding-top: 11px;
   padding-bottom: 10px;
 
   color: #ffffff;
@@ -1239,7 +1239,7 @@ img {
 
   position: absolute;
   top: 0;
-  right: -17px;
+  right: -22px;
 
   width: 0;
   height: 0;
@@ -1372,7 +1372,7 @@ img {
   min-height: 123px;
   margin-bottom: 20px;
   padding-right: 140px;
-  padding-left: 24px;
+  padding-left: 23px;
 
   font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
@@ -1429,7 +1429,7 @@ img {
   position: absolute;
   top: 109px;
 
-  width: 36px;
+  width: 46px;
   height: 50px;
 
   background-color: transparent;
@@ -1462,11 +1462,11 @@ img {
 }
 
 .banner-button-left::before {
-  transform: translate(-8px, -14px) rotate(45deg);
+  transform: translate(-12px, -14px) rotate(45deg);
 }
 
 .banner-button-right::before {
-  transform: translate(-20px, -14px) rotate(-135deg);
+  transform: translate(-14px, -14px) rotate(-135deg);
 }
 
 .banner-button:hover::before,
@@ -1593,7 +1593,7 @@ img {
   width: 620px;
   height: 266px;
   padding-top: 22px;
-  padding-left: 24px;
+  padding-left: 25px;
 
   font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
@@ -1649,8 +1649,12 @@ img {
   color: #32425c;
 }
 
+.content-header .button {
+  width: 253px;
+}
+
 .content-popular-manufacturers {
-  margin-bottom: 65px;
+  margin-bottom: 64px;
 }
 
 .manufacturers-list {
@@ -1664,19 +1668,17 @@ img {
   list-style: none;
 }
 
-.manufacturers-list li {
+.manufacturers-list .manufacturer {
   flex-shrink: 0;
   margin-bottom: 20px;
   margin-right: 20px;
 }
 
-.manufacturers-list li:nth-child(4n) {
+.manufacturers-list .manufacturer:nth-child(4n) {
   margin-right: 0;
 }
 
-.manufacturers-list a {
-  position: relative;
-
+.manufacturer a {
   display: block;
   width: 218px;
   height: 143px;
@@ -1686,23 +1688,54 @@ img {
   background-color: #ffffff;
 }
 
-.manufacturers-list a:hover,
-.manufacturers-list a:focus {
+.manufacturer a:hover,
+.manufacturer a:focus {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.manufacturers-list a:active {
+.manufacturer a:active {
   box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
   opacity: 0.3;
 }
 
-.manufacturers-list img {
-  position: absolute;
+.manufacturer:nth-child(1) img {
+  padding-top: 51px;
+  padding-left: 47px;
+}
 
-  top: 50%;
-  left: 50%;
+.manufacturer:nth-child(2) img {
+  padding-top: 48px;
+  padding-left: 48px;
+}
 
-  transform: translate(-50%, -50%);
+.manufacturer:nth-child(3) img {
+  padding-top: 46px;
+  padding-left: 37px;
+}
+
+.manufacturer:nth-child(4) img {
+  padding-top: 19px;
+  padding-left: 9px;
+}
+
+.manufacturer:nth-child(5) img {
+  padding-top: 56px;
+  padding-left: 28px;
+}
+
+.manufacturer:nth-child(6) img {
+  padding-top: 33px;
+  padding-left: 48px;
+}
+
+.manufacturer:nth-child(7) img {
+  padding-top: 21px;
+  padding-left: 35px;
+}
+
+.manufacturer:nth-child(8) img {
+  padding-top: 32px;
+  padding-left: 10px;
 }
 
 .content-info {

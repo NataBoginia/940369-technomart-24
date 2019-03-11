@@ -17,6 +17,10 @@ var closeAddPopupButton = document.querySelector(".item-add-popup .close-popup-b
 var orderPopupButton = document.querySelector(".item-add-popup .button-order");
 var continuePopupButton = document.querySelector(".item-add-popup .button-continue");
 
+var bannerButtons = document.querySelectorAll(".banner-button");
+var bannerDots = document.querySelectorAll(".banner-toggle-dot");
+var bannerSlides = document.querySelectorAll(".banner-slide");
+
 var isStorageSupport = true;
 
 
@@ -128,3 +132,74 @@ document.addEventListener("keydown", function (evt) {
   }
 
 });
+
+// переключение баннеров по стрелкам влево-вправо
+if (bannerButtons && bannerSlides) {
+  var bannerButtonBackward = bannerButtons[0];
+  var bannerButtonForward = bannerButtons[1];
+  var currentSlideIndex = 0;
+
+  //переключение по стрелке влево
+  bannerButtonBackward.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var i = 0; i < bannerSlides.length; i++) {
+      if (!bannerSlides[i].classList.contains("visually-hidden")) {
+        currentSlideIndex = i;
+      }
+    }
+
+    bannerSlides[currentSlideIndex].classList.add("visually-hidden");
+
+    if (currentSlideIndex === 0) {
+      bannerSlides[bannerSlides.length-1].classList.remove("visually-hidden");
+    } else {
+      bannerSlides[currentSlideIndex-1].classList.remove("visually-hidden");
+    }
+
+  });
+
+  //переключение по стрелке вправо
+  bannerButtonForward.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var i = 0; i < bannerSlides.length; i++) {
+      if (!bannerSlides[i].classList.contains("visually-hidden")) {
+        currentSlideIndex = i;
+        console.log(currentSlideIndex);
+      }
+    }
+
+    bannerSlides[currentSlideIndex].classList.add("visually-hidden");
+
+    if (currentSlideIndex === (bannerSlides.length - 1)) {
+      bannerSlides[0].classList.remove("visually-hidden");
+    } else {
+      bannerSlides[currentSlideIndex+1].classList.remove("visually-hidden");
+    }
+
+  });
+}
+
+// переключение баннеров по нажатию на точки
+if (bannerDots && bannerSlides) {
+
+  var addDotClickHandler = function (currentDotIndex) {
+
+    bannerDots[currentDotIndex].addEventListener("click", function () {
+      var currentSlideIndex = 0;
+      for (var j = 0; j < bannerSlides.length; j++) {
+        if (!bannerSlides[j].classList.contains("visually-hidden")) {
+          currentSlideIndex = j;
+        }
+      }
+      if (currentDotIndex != currentSlideIndex) {
+        bannerSlides[currentDotIndex].classList.remove("visually-hidden");
+        bannerSlides[currentSlideIndex].classList.add("visually-hidden");
+      }
+    });
+  };
+
+  for (var i = 0; i < bannerDots.length; i++) {
+    addDotClickHandler(i);
+  }
+
+}
