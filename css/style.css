@@ -627,9 +627,8 @@ img {
 }
 
 .content-services {
-  margin-bottom: 80px;
+  margin-bottom: 78px;
   padding-top: 65px;
-  padding-bottom: 130px;
 
   color: #000000;
 
@@ -638,7 +637,7 @@ img {
 
 .content-services h2 {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
   padding: 0;
 
   font-weight: normal;
@@ -649,7 +648,7 @@ img {
 
 .content-services p {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 70px;
   padding: 0;
   padding-right: 525px;
 
@@ -658,24 +657,43 @@ img {
   line-height: 24px;
   font-family: 'PT Sans', Arial, sans-serif;
 }
+
 .content-slider-container {
   display: flex;
 }
 
-
 .toggle-labels {
+  position: relative;
+
   margin: 0;
   padding: 0;
-  padding-top: 23px;
 
   list-style: none;
+}
+
+.toggle-labels::after {
+  content: "";
+
+  position: absolute;
+  top: -42px;
+  right: 0;
+
+  width: 10px;
+  height: 279px;
+
+  background-image: url("../img/slider-shadow.png");
+  background-repeat: no-repeat;
+  background-size: 10px 279px;
 }
 
 .toggle-labels label {
   display: block;
   box-sizing: border-box;
   width: 240px;
-  padding-left: 21px;
+  padding-top: 14px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+  padding-left: 23px;
 
   font-weight: bold;
   font-size: 21px;
@@ -683,27 +701,99 @@ img {
   color: #ffffff;
 
   background-color: #32425c;
+  box-shadow:
+    0px 1px 0 0 #293449,
+    inset 0px 1px 0 0 #405069;
+
+  cursor: pointer;
 }
 
-.service-toggle:not(:checked)+label:hover{
+.service-toggle:not(:checked)+label:hover {
   background-color: #293449;
 }
 
-.service-toggle:checked+label{
+.service-toggle:checked+label {
   color: #32425c;
 
   background-color: #ffffff;
+  box-shadow:
+    0px 1px 0 0 #ffffff,
+    inset 0px 1px 0 0 #ffffff;
+}
+
+.service-toggle:focus+label{
+  outline: 1px dotted #bbbbbb;
+  outline-offset: 5px;
+}
+
+.slide-container {
+  position: relative;
 }
 
 .content-slide {
+  min-height: 285px;
   margin-left: 81px;
-  padding-top: 22px;
+}
+
+.content-slide::before {
+  content: "";
+
+  position: absolute;
+}
+
+.delivery-slide {
   padding-right: 345px;
+}
+
+.delivery-slide::before {
+  top: 23px;
+  right: 1px;
+
+  width: 468px;
+  height: 261px;
+
+  background-image: url("../img/delivery.png");
+}
+
+.warranty-slide {
+  padding-right: 240px;
+}
+
+.warranty-slide::before {
+  top: 2px;
+  right: -9px;
+
+  width: 389px;
+  height: 283px;
+
+  background-image: url("../img/warranty.png");
+}
+
+.credit-slide {
+  padding-right: 310px;
+}
+
+.content-slide.credit-slide p {
+  margin-bottom: 28px;
+}
+
+.credit-slide .button {
+  width: 195px;
+}
+
+.credit-slide::before {
+  top: 0;
+  right: -41px;
+
+  width: 465px;
+  height: 285px;
+
+  background-image: url("../img/credit.png");
 }
 
 .content-slide h3 {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
   padding: 0;
 
   font-weight: normal;
@@ -747,7 +837,7 @@ img {
 }
 
 .content-info .trasport-companies-title {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   padding-right: 150px;
 }
 
@@ -774,7 +864,7 @@ img {
   content: "";
 
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 0;
 
   width: 25px;
@@ -1857,7 +1947,7 @@ img {
 }
 
 .main-footer {
-  margin-top: 85px;
+  margin-top: 86px;
 
   font-size: 18px;
   line-height: 24px;

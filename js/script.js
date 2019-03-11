@@ -21,6 +21,9 @@ var bannerButtons = document.querySelectorAll(".banner-button");
 var bannerDots = document.querySelectorAll(".banner-toggle-dot");
 var bannerSlides = document.querySelectorAll(".banner-slide");
 
+var sliderButtons = document.querySelectorAll(".toggle-labels input");
+var sliderSlides = document.querySelectorAll(".slide-container .content-slide");
+
 var isStorageSupport = true;
 
 
@@ -133,13 +136,14 @@ document.addEventListener("keydown", function (evt) {
 
 });
 
-// переключение баннеров по стрелкам влево-вправо
-if (bannerButtons && bannerSlides) {
+// переключение баннеров и точек по стрелкам влево-вправо
+if (bannerButtons && bannerSlides && bannerDots) {
   var bannerButtonBackward = bannerButtons[0];
   var bannerButtonForward = bannerButtons[1];
   var currentSlideIndex = 0;
+  var newSlideIndex = 0;
 
-  //переключение по стрелке влево
+  //переключение слайдов и точек по стрелке влево
   bannerButtonBackward.addEventListener("click", function (evt) {
     evt.preventDefault();
     for (var i = 0; i < bannerSlides.length; i++) {
@@ -151,48 +155,51 @@ if (bannerButtons && bannerSlides) {
     bannerSlides[currentSlideIndex].classList.add("visually-hidden");
 
     if (currentSlideIndex === 0) {
-      bannerSlides[bannerSlides.length-1].classList.remove("visually-hidden");
+      newSlideIndex = bannerSlides.length - 1;
     } else {
-      bannerSlides[currentSlideIndex-1].classList.remove("visually-hidden");
+      newSlideIndex = currentSlideIndex - 1;
     }
 
+    bannerSlides[newSlideIndex].classList.remove("visually-hidden");
+    bannerDots[newSlideIndex].checked=true;
   });
 
-  //переключение по стрелке вправо
+  //переключение слайдов и точек по стрелке вправо
   bannerButtonForward.addEventListener("click", function (evt) {
     evt.preventDefault();
     for (var i = 0; i < bannerSlides.length; i++) {
       if (!bannerSlides[i].classList.contains("visually-hidden")) {
         currentSlideIndex = i;
-        console.log(currentSlideIndex);
       }
     }
 
     bannerSlides[currentSlideIndex].classList.add("visually-hidden");
 
     if (currentSlideIndex === (bannerSlides.length - 1)) {
-      bannerSlides[0].classList.remove("visually-hidden");
+      newSlideIndex = 0;
     } else {
-      bannerSlides[currentSlideIndex+1].classList.remove("visually-hidden");
+      newSlideIndex = currentSlideIndex + 1;
     }
 
+    bannerSlides[newSlideIndex].classList.remove("visually-hidden");
+    bannerDots[newSlideIndex].checked=true;
   });
 }
 
 // переключение баннеров по нажатию на точки
 if (bannerDots && bannerSlides) {
 
-  var addDotClickHandler = function (currentDotIndex) {
+  var addDotClickHandler = function (dotIndex) {
 
-    bannerDots[currentDotIndex].addEventListener("click", function () {
+    bannerDots[dotIndex].addEventListener("click", function () {
       var currentSlideIndex = 0;
       for (var j = 0; j < bannerSlides.length; j++) {
         if (!bannerSlides[j].classList.contains("visually-hidden")) {
           currentSlideIndex = j;
         }
       }
-      if (currentDotIndex != currentSlideIndex) {
-        bannerSlides[currentDotIndex].classList.remove("visually-hidden");
+      if (dotIndex != currentSlideIndex) {
+        bannerSlides[dotIndex].classList.remove("visually-hidden");
         bannerSlides[currentSlideIndex].classList.add("visually-hidden");
       }
     });
@@ -200,6 +207,31 @@ if (bannerDots && bannerSlides) {
 
   for (var i = 0; i < bannerDots.length; i++) {
     addDotClickHandler(i);
+  }
+
+}
+
+//переключение слайдов в слайдере по нажатию на лейблы
+if (sliderButtons && sliderSlides) {
+
+  var addSliderButtonClickHandler = function (buttonIndex) {
+
+    sliderButtons[buttonIndex].addEventListener("click", function () {
+      var currentSlideIndex = 0;
+      for (var j = 0; j < sliderSlides.length; j++) {
+        if (!sliderSlides[j].classList.contains("visually-hidden")) {
+          currentSlideIndex = j;
+        }
+      }
+      if (buttonIndex != currentSlideIndex) {
+        sliderSlides[buttonIndex].classList.remove("visually-hidden");
+        sliderSlides[currentSlideIndex].classList.add("visually-hidden");
+      }
+    });
+  };
+
+  for (var i = 0; i < sliderButtons.length; i++) {
+    addSliderButtonClickHandler(i);
   }
 
 }
