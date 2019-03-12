@@ -643,7 +643,7 @@ img {
 
 .popular-items-list {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   padding: 0;
 
   display: -webkit-box;
@@ -673,7 +673,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 20px;
-  padding: 25px 23px 27px 24px;
+  padding: 26px 23px 26px 24px;
 
   color: #32425c;
 
@@ -702,7 +702,7 @@ img {
 
 .content-services p {
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 67px;
   padding: 0;
   padding-right: 525px;
 
@@ -899,14 +899,14 @@ img {
   color: #000000;
 }
 
-.content-info .trasport-companies-title {
+.content-info .transport-companies-title {
   margin-bottom: 21px;
   padding-right: 150px;
 }
 
-.content-info .trasport-companies-list {
+.content-info .transport-companies-list {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   padding: 0;
 
   font-size: 18px;
@@ -916,14 +916,14 @@ img {
   list-style: none;
 }
 
-.trasport-companies-list li {
+.transport-companies-list li {
   position: relative;
 
   margin-bottom: 20px;
   padding-left: 35px;
 }
 
-.trasport-companies-list li::before {
+.transport-companies-list li::before {
   content: "";
 
   position: absolute;
@@ -1763,7 +1763,7 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .content-banners .banner {
@@ -2029,7 +2029,7 @@ img {
           box-sizing: border-box;
   width: 620px;
   height: 266px;
-  padding-top: 22px;
+  padding-top: 23px;
   padding-left: 25px;
 
   font-family: "Cuprum", Arial, sans-serif;
@@ -2091,7 +2091,7 @@ img {
 }
 
 .content-popular-manufacturers {
-  margin-bottom: 62px;
+  margin-bottom: 64px;
 }
 
 .manufacturers-list {
@@ -2682,7 +2682,8 @@ img {
           animation-name: mark-incorrect-input;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .feedback-inputs p {
@@ -2888,15 +2889,33 @@ img {
   }
 }
 
-@keyframes mark-incorrect-input {
+@-webkit-keyframes mark-incorrect-input {
   from {
-    box-shadow: 0px 0px 20px 4px rgba(255, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(255, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px 4px rgba(255, 0, 0, 0.1);
   }
   40% {
-    box-shadow: 0px 0px 3px 4px rgba(255, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 0, 0, 0.7);
+            box-shadow: 0px 0px 3px 4px rgba(255, 0, 0, 0.7);
   }
   to {
-    box-shadow: 0px 0px 12px 4px rgba(255, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 12px 4px rgba(255, 0, 0, 0.3);
+            box-shadow: 0px 0px 12px 4px rgba(255, 0, 0, 0.3);
+  }
+}
+
+@keyframes mark-incorrect-input {
+  from {
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(255, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px 4px rgba(255, 0, 0, 0.1);
+  }
+  40% {
+    -webkit-box-shadow: 0px 0px 3px 4px rgba(255, 0, 0, 0.7);
+            box-shadow: 0px 0px 3px 4px rgba(255, 0, 0, 0.7);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 12px 4px rgba(255, 0, 0, 0.3);
+            box-shadow: 0px 0px 12px 4px rgba(255, 0, 0, 0.3);
   }
 }
 
