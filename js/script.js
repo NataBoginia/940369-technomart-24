@@ -1,11 +1,8 @@
 var feedbackButton = document.querySelector(".feedback-button");
 var feedbackPopup = document.querySelector(".feedback-popup");
 var closeFeedbackPopupButton = document.querySelector(".feedback-popup .close-popup-button");
-var feedbackName = document.querySelector(".feedback-popup [name=username]");
-var feedbackEmail = document.querySelector(".feedback-popup [name=email]");
-var feedbackText = document.querySelector(".feedback-popup [name=text]");
+var feedbackInputs = document.querySelectorAll(".feedback-popup .feedback-input");
 var sendFeedbackButton = document.querySelector(".feedback-popup button[type=submit]");
-// var feedbackError = feedbackPopup.querySelector(".popup-footer");
 
 var mapButton = document.querySelector(".map-link");
 var mapPopup = document.querySelector(".map-popup");
@@ -31,18 +28,18 @@ if (feedbackButton) {
     feedbackButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.add("show-popup");
-    feedbackName.focus();
+    feedbackInputs[0].focus();
     try {
-      feedbackName.value = localStorage.getItem("feedbackName");
+      feedbackInputs[0].value = localStorage.getItem("feedbackName");
     } catch (err) {
       isStorageSupport = false;
     }
 
     if (isStorageSupport) {
-      feedbackEmail.value = localStorage.getItem("feedbackEmail");
+      feedbackInputs[1].value = localStorage.getItem("feedbackEmail");
     }
 
-    feedbackText.value = "";
+    feedbackInputs[2].value = "";
   });
 }
 
@@ -51,26 +48,58 @@ if (closeFeedbackPopupButton) {
   closeFeedbackPopupButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.remove("show-popup");
+
+    for (var i = 0; i < feedbackInputs.length; i++) {
+      feedbackInputs[i].classList.remove("incorrect-input");
+    }
   });
 }
 
 // обработка нажатия клавиши Отправить на поп-апе обратной связи
 if (sendFeedbackButton) {
   sendFeedbackButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
 
-    if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
-      console.log("Ошибка!");
+    var hasIncorrectInput=false;
+
+    for (var i = 0; i < feedbackInputs.length; i++) {
+      if (!feedbackInputs[i].value) {
+        feedbackInputs[i].classList.remove("incorrect-input");
+        feedbackInputs[i].offsetWidth = feedbackInputs[i].offsetWidth;
+        feedbackInputs[i].classList.add("incorrect-input");
+        hasIncorrectInput = true;
+      }
+    }
+
+    if (hasIncorrectInput) {
+      evt.preventDefault();
     } else {
 
-      if (isStorageSupport) {
-        localStorage.setItem("feedbackName", feedbackName.value);
-        localStorage.setItem("feedbackEmail", feedbackEmail.value);
-      }
+        if (isStorageSupport) {
+          localStorage.setItem("feedbackName", feedbackInputs[0].value);
+          localStorage.setItem("feedbackEmail", feedbackInputs[1].value);
+        }
 
-      feedbackPopup.classList.remove("show-popup");
+        feedbackPopup.classList.remove("show-popup");
+        for (var i = 0; i < feedbackInputs.length; i++) {
+          feedbackInputs[i].classList.remove("incorrect-input");
+        }
     }
   });
+}
+
+// убрать красную тень при заполнении поля
+if (feedbackInputs[0]) {
+
+  var addFeedbackInputHandler = function (inputIndex) {
+
+    feedbackInputs[inputIndex].addEventListener("input", function () {
+      feedbackInputs[inputIndex].classList.remove("incorrect-input");
+    });
+  };
+
+  for (var i = 0; i < feedbackInputs.length; i++) {
+    addFeedbackInputHandler(i);
+  }
 }
 
 //открыть поп-ап с картой
@@ -108,7 +137,7 @@ if (closeAddPopupButton) {
   });
 }
 
-// закрыть поп-ап с подтверждением заказа по кнопке Продолжит покупки
+// закрыть поп-ап с подтверждением заказа по кнопке Продолжить покупки
 if (continuePopupButton) {
   continuePopupButton.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -127,6 +156,10 @@ document.addEventListener("keydown", function (evt) {
     }
       else if (feedbackPopup && feedbackPopup.classList.contains("show-popup")) {
         feedbackPopup.classList.remove("show-popup");
+
+        for (var i = 0; i < feedbackInputs.length; i++) {
+          feedbackInputs[i].classList.remove("incorrect-input");
+        }
     }
       else if (addPopup && addPopup.classList.contains("show-popup")) {
         addPopup.classList.remove("show-popup");
