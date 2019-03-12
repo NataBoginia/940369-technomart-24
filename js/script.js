@@ -36,7 +36,7 @@ if (feedbackButton) {
     try {
       feedbackName.value = localStorage.getItem("feedbackName");
     } catch (err) {
-      isStorageSupport=false;
+      isStorageSupport = false;
     }
 
     if (isStorageSupport) {
@@ -60,7 +60,7 @@ if (sendFeedbackButton) {
   sendFeedbackButton.addEventListener("click", function (evt) {
     evt.preventDefault();
 
-    if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value){
+    if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
       console.log("Ошибка!");
     } else {
 
@@ -161,7 +161,7 @@ if (bannerButtons && bannerSlides && bannerDots) {
     }
 
     bannerSlides[newSlideIndex].classList.remove("visually-hidden");
-    bannerDots[newSlideIndex].checked=true;
+    bannerDots[newSlideIndex].checked = true;
   });
 
   //переключение слайдов и точек по стрелке вправо
@@ -182,7 +182,7 @@ if (bannerButtons && bannerSlides && bannerDots) {
     }
 
     bannerSlides[newSlideIndex].classList.remove("visually-hidden");
-    bannerDots[newSlideIndex].checked=true;
+    bannerDots[newSlideIndex].checked = true;
   });
 }
 
