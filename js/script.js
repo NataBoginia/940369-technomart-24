@@ -26,7 +26,6 @@ var sliderSlides = document.querySelectorAll(".slide-container .content-slide");
 
 var isStorageSupport = true;
 
-
 // открыть поп-ап с обратной связью
 if (feedbackButton) {
     feedbackButton.addEventListener("click", function (evt) {
@@ -91,7 +90,7 @@ if (closeMapPopupButton) {
 }
 
 // открыть поп-ап с подтверждением заказа
-if (addButton) {
+if (addButton[0] && addPopup) {
   for (var i = 0; i< addButton.length; i++) {
     addButton[i].addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -137,7 +136,7 @@ document.addEventListener("keydown", function (evt) {
 });
 
 // переключение баннеров и точек по стрелкам влево-вправо
-if (bannerButtons && bannerSlides && bannerDots) {
+if (bannerButtons[0] && bannerSlides[0] && bannerDots[0]) {
   var bannerButtonBackward = bannerButtons[0];
   var bannerButtonForward = bannerButtons[1];
   var currentSlideIndex = 0;
@@ -187,7 +186,7 @@ if (bannerButtons && bannerSlides && bannerDots) {
 }
 
 // переключение баннеров по нажатию на точки
-if (bannerDots && bannerSlides) {
+if (bannerDots[0] && bannerSlides[0]) {
 
   var addDotClickHandler = function (dotIndex) {
 
@@ -212,7 +211,7 @@ if (bannerDots && bannerSlides) {
 }
 
 //переключение слайдов в слайдере по нажатию на лейблы
-if (sliderButtons && sliderSlides) {
+if (sliderButtons[0] && sliderSlides[0]) {
 
   var addSliderButtonClickHandler = function (buttonIndex) {
 
@@ -233,5 +232,4 @@ if (sliderButtons && sliderSlides) {
   for (var i = 0; i < sliderButtons.length; i++) {
     addSliderButtonClickHandler(i);
   }
-
 }
