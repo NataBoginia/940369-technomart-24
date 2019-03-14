@@ -1660,7 +1660,8 @@ img {
 }
 
 .catalog-item:hover .item-buttons,
-.catalog-item:focus .item-buttons {
+.catalog-item:focus .item-buttons,
+.catalog-item:focus-within .item-buttons {
   display: block;
 }
 
